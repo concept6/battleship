@@ -1,12 +1,25 @@
 
-const Ship = (enter_length) => {
+const Ship = (enter_length,align,origin) => {
     // assume enter_length is valid for now.
+    // also assumes align is either 'horizontal' or 'vertical'
+
     const length = enter_length;
 
     const hits = new Array(length).fill(0);
 
     let sunk = false;
 
+    this.align = align;
+
+    this.origin = origin; // coords
+
+    const rotate = () => {
+        if (align === 'horizontal') {
+            align = 'vertical'
+        } else if (align === 'vertical') {
+            align = 'horizontal'
+        };
+    };
 
     const hit = (num) => {
         // not worried about duplicate guesses here.
@@ -22,8 +35,12 @@ const Ship = (enter_length) => {
     }
 
     return {
-        hits, //may stop returning this in the future.
+        hits, //may stop returning this in the future. Currently, need it for tests.
+        align,
+        rotate,
+        origin,
         hit,
+        sunk,
         isSunk,
     };
 
