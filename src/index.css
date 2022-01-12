@@ -1,0 +1,54 @@
+
+
+#header {
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+    height: 10vh;
+}
+
+.container {
+    height: 80vh;
+}
+
+.boards-container {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.board {
+    margin: 16px;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10%10% 10% 10% 10% 10%;
+    color: black;
+    border: 1px dashed black;
+}
+
+.gridDot {
+    text-align: center;
+    margin: 0px;
+    border: 1px dashed black;
+    height: 30px;
+    width: 30px;
+    background-color: aqua;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.gridDot:hover {opacity: 1};
+
+
+.infotainer {
+    display: flex;
+    justify-content: center;
+    margin: 24px;
+}
+
+
+#footer {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    width: 100vw;
+}
