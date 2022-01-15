@@ -1,8 +1,6 @@
 
 const Player = (isComputer, pBoard, eBoard,testing) => {
 
-    this.isComputer = isComputer; // false for human.
-
     
     // place ships here?
 
@@ -56,4 +54,4 @@ const Player = (isComputer, pBoard, eBoard,testing) => {
 
 }
 
-module.exports = Player;
+export default Player;

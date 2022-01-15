@@ -9,20 +9,18 @@ const Ship = (enter_length,align,origin) => {
 
     let sunk = false;
 
-    this.align = align;
-
-    this.origin = origin; // coords
+    
 
     const rotate = () => {
         if (align === 'horizontal') {
             align = 'vertical'
         } else if (align === 'vertical') {
             align = 'horizontal'
-        };
+        }
     };
 
     const hit = (num) => {
-        // not worried about duplicate guesses here.
+        // not worried about duplicate guesses here. possible TODO
         hits[num] = 1;
     }
 
@@ -46,4 +44,4 @@ const Ship = (enter_length,align,origin) => {
 
 };
 
-module.exports = Ship;
+export default Ship;

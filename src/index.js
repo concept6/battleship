@@ -1,4 +1,7 @@
-const gameloop = require('./gameloop');
-import "./index.css";s
+import gameloop from './gameloop';
+import "./index.css";
+
+
+
 
 gameloop();
