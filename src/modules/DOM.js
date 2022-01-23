@@ -5,12 +5,13 @@ const DOM = (() => {
   
 
 
-    const displayGrid = (gameboard, boardDOM) =>  {
+    const createDOMGrid = (gameboard, boardDOM) =>  {
         // displays dots on the boards corresponding to the data board.
         
 
         while (boardDOM.firstChild) {
-            boardDOM.removeChild;
+            //boardDOM.removeChild;
+            boardDOM.textContent = '';
         }
 
 
@@ -29,7 +30,7 @@ const DOM = (() => {
         }
 
         
-        return;
+        return gridDots;
 
     }
 
@@ -42,18 +43,18 @@ const DOM = (() => {
             container.removeChild;
         }
 
-        const boards = document.createElement('div');
-        boards.classList.add('boards-container');
-        container.appendChild(boards);
+        const boardsContainer = document.createElement('div');
+        boardsContainer.classList.add('boards-container');
+        container.appendChild(boardsContainer);
     
-        const lBoard = document.createElement('div');
+        const domBoard1 = document.createElement('div');
         //lBoard.textContent = 'Test a board.';
-        lBoard.classList.add('board','l')
-        const rBoard = document.createElement('div');
+        domBoard1.classList.add('board','board-one')
+        const domBoard2 = document.createElement('div');
         //rBoard.textContent = 'Test b board.';
-        rBoard.classList.add('board','r');
-        boards.appendChild(lBoard);
-        boards.appendChild(rBoard);
+        domBoard2.classList.add('board','board-two');
+        boardsContainer.appendChild(domBoard1);
+        boardsContainer.appendChild(domBoard2);
 
 
         const infotainer = document.createElement('div')
@@ -71,7 +72,7 @@ const DOM = (() => {
 
     return {
         displayBoards,
-        displayGrid,
+        createDOMGrid,
     }
 
 })();
